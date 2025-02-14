@@ -41,6 +41,7 @@ return {
           dotfiles = true,
           custom = {
             "node_modules/.*",
+            "vendor/.*",
           },
         },
         log = {
@@ -54,10 +55,6 @@ return {
           },
         },
       })
-
-      if vim.fn.argc(-1) == 0 then
-        vim.cmd("NvimTreeFocus")
-      end
     end,
   },
 }
