@@ -19,6 +19,11 @@ return {
       {
         ";f",
         function()
+          require("telescope").setup({
+            defaults = {
+              file_ignore_patterns = { "vendor/", "node_modules/", ".git/" },
+            },
+          })
           local builtin = require("telescope.builtin")
           builtin.find_files({
             no_ignore = false,
