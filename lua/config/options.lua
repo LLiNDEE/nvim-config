@@ -32,3 +32,5 @@ vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 
 vim.opt.formatoptions:append({ "r" })
+
+vim.g.lazyvim_php_lsp = "intelephense"
