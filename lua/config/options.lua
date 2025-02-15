@@ -34,3 +34,4 @@ vim.opt.mouse = ""
 vim.opt.formatoptions:append({ "r" })
 
 vim.g.lazyvim_php_lsp = "intelephense"
+vim.g.lazyvim_eslint_auto_format = false
