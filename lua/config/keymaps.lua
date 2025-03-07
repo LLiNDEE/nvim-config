@@ -35,6 +35,20 @@ keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
 
--- Move lines when in v-mode
+-- Move lines in visual mode
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Move half a page up/down
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Improved searches
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+
+keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+keymap.set("n", "<leader>Y", [["Ý]])
+
+-- Save deletions to unused registry
+keymap.set({ "n", "v" }, "<leader>d", '"_d')
