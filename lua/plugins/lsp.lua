@@ -21,15 +21,6 @@ return {
       ---@type lspconfig.options
       servers = {
         cssls = {},
-        eslint = {
-          settings = {
-            workingDirectories = { mode = "auto" },
-            format = auto_format,
-            experimental = {
-              useFlatConfig = true,
-            },
-          },
-        },
         tailwindcss = {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
